@@ -40,6 +40,20 @@
 			</snapshots>
 		</repository>
 	</repositories>
+	
+	<plugin>
+          <groupId>org.apache.tomcat.maven</groupId>
+          <artifactId>tomcat7-maven-plugin</artifactId>
+          <version>2.2</version>
+            <configuration>
+                <server>tomcatServer</server>
+                <url>http://${IP}:${port}/manager/text</url>
+                <path>/portal</path>
+                <username>${username}</username>
+                <password>${password}</password>
+            </configuration>
+          </plugin>
+
 
 	<dependencyManagement>
 		<dependencies>
